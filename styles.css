@@ -1,0 +1,80 @@
+* {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+html {
+  font-size: 70%;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url('sunrise2.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.location {
+  line-height: 3.5rem;
+}
+
+.degrees {
+  font-size: 15rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.degrees::after {
+  content: '\00B0 C';
+  font-size: 3rem;
+  position: absolute;
+  top: 1.8rem;
+  left: 17rem;
+}
+
+.weather-details {
+  border-left: 0.2rem solid rgba(255, 255, 255, 0.5);
+}
+
+.feels-like::after {
+  content: '\00B0 C';
+  position: absolute;
+  bottom: 1rem;
+  left: 11rem;
+  font-size: 1rem;
+}
+
+.humidity::after {
+  content: '%';
+}
+
+.fade-in {
+  animation: fadeIn 0.2s;
+  margin-top: 0.6rem;
+  margin-left: 2rem;
+}
+
+.fade-in2 {
+  animation: fadeIn2 0.1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    top: 6rem;
+  }
+  100% {
+    opacity: 0.5;
+    top: 4.4rem;
+  }
+}
+
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0.1;
+    transform: scale(0.9, 0.9);
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&family=Source+Sans+Pro:wght@900&display=swap"
+        rel="stylesheet" />
+    <title>Weather App</title>
+    <title>Document</title>
+    <script src='script.js' defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="">
+    <div id="main-container" class="flex justify-center">
+
+
+        <!-- Box where the weather is displayed with the background gradient color  -->
+        <div
+            class="main-weather-display info border-4 bg-gradient-to-r from-[#efc977] to-[#e07256] w-1/2 text-white absolute top-1/4">
+            <!-- End of the box display  -->
+            <!-- The form to submit a city  -->
+            <form>
+                <div class="form-group p-12">
+                    <button class="submit-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <input type="text" placeholder="Search city"
+                        class="w-96 h-full bg-white/30 text-2xl rounded-lg pl-12 outline-transparent placeholder:text-white	" />
+                    <br />
+                    <!-- the case where no matching location  -->
+                    <span class="error-msg hidden absolute left-8 text-red-500 text-xl ">No matching location
+                        found!</span>
+                    <!-- end of no matching location -->
+                </div>
+            </form>
+            <!-- End of the form  -->
+            <!-- The weather display left info -->
+            <div class="general-info">
+                <p class="condition text-4xl tracking-wide pl-1.5 ml-8"></p>
+                <h1 class="location ml-8 text-7xl mb-4 font-extrabold tracking-wide		">Select a location</h1>
+                <span class="degrees flex pl-8 font-black relative">??</span>
+            </div>
+            <!-- End of the weather display left info -->
+            <!-- The weather display right info -->
+            <div
+                class="weather-details info flex flex-col text-2xl font-black tracking-widest absolute pl-14 justify-between h-40 left-96 top-1/2">
+                <p class="humidity">Humidity % : ??</p>
+                <p class="wind-mph">Wind speed : ? MPH</p>
+                <p class="feels-like relative">Feels like : ??</p>
+            </div>
+            <!-- End of the weather display right info -->
+        </div>
+    </div>
+</body>
+
+</html>
